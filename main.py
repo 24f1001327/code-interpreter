@@ -2,6 +2,7 @@
 import json
 import os
 import re
+from dotenv import load_dotenv
 import urllib.error
 import urllib.request
 import traceback
@@ -12,6 +13,8 @@ from typing import List
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+
+load_dotenv()
 
 
 app = FastAPI(
